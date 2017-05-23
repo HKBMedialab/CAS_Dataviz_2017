@@ -1,0 +1,169 @@
+
+// Default mixins and settings -----------------
+@import "../template/mixins";
+@import "../template/settings";
+// ---------------------------------------------
+
+
+// Include theme-specific fonts
+@import url(../../lib/font/circular/font.css);
+
+
+// Override theme settings (see ../template/settings.scss)
+$backgroundColor: #fff;
+
+$mainColor: #222;
+$headingColor: #222;
+
+$mainFontSize: 30px;
+$mainFont: Helvetica, sans-serif;
+$headingFont: Helvetica, sans-serif;
+$headingTextShadow: none;
+$headingLetterSpacing: normal;
+$headingTextTransform: uppercase;
+$headingFontWeight: 600;
+$linkColor: #2a76dd;
+$linkColorHover: lighten( $linkColor, 15% );
+$selectionBackgroundColor: lighten( $linkColor, 25% );
+
+$heading1Size: 2.0em;
+$heading2Size: 1.5em;
+$heading3Size: 1.2em;
+$heading4Size: 1.0em;
+
+section.has-dark-background {
+	&, h1, h2, h3, h4, h5, h6 {
+		color: #fff;
+	}
+}
+
+
+.reveal .slides>section,
+.reveal .slides>section>section {
+	line-height: 1.5;
+	font-weight: inherit;
+	text-align:left;
+}
+
+
+
+// Theme template ------------------------------
+@import "../template/theme";
+// ---------------------------------------------
+
+.reveal section{
+	position:relative;
+}
+
+.reveal section.inverted{
+	h1,h2,h3,h4,p,li{
+		color:white;
+	}
+}
+
+.reveal section img{
+	border:none;
+	box-shadow:none;
+}
+
+.reveal section ul{
+	margin-bottom:1.5em;
+	padding-left:.5em;
+	list-style: none;
+
+li:before{
+	content:"–";
+	position:relative;
+	margin-left: -20px; /* optional, for multiline li element */
+	left: -10px;
+}
+
+}
+
+.reveal section iframe{
+	width:100%;
+	height:100%;
+}
+
+.reveal section .vimeostretch{
+	top:0;
+	left:0;
+	width:100%;
+	padding-bottom:57% ;
+	position:relative;
+
+	iframe{
+		position:absolute;
+		top:0;
+		left:0;
+		right:0;
+		bottom:0;
+	}
+}
+
+.reveal .clear{
+	clear:both;
+}
+ 
+
+.reveal em{
+	font-weight:700;
+}
+
+.reveal blockquote {
+	width:auto;
+	box-shadow: none;
+	padding:0 2em 0 2em;
+}
+
+div.quelle{
+		margin-top:1rem;
+		font-size:0.7em;
+		bottom:1.5em;
+		position:absolute;
+
+}
+div.small{
+	margin-top:1rem;
+		font-size:0.7em;
+}
+
+.reveal section{
+	 height:100%;
+}
+
+.reveal img{
+	max-height:90%;
+}
+.reveal img.small{
+	width:25%;
+}
+
+.reveal img.medium{
+	height:430px;
+	margin-right:10px;
+}
+
+.reveal img.left{
+	float:left;
+}
+.reveal img.right{
+	float:right;
+}
+
+
+.reveal .smalltext{
+
+.row{
+	margin:0 -1em 0 -1em;
+	clear:both;
+}
+.column{
+	box-sizing:border-box;
+	width:50%;
+	padding:0 1em 0 1em;
+	float:left;
+}
+
+}
+

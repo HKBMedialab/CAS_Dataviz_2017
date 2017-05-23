@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>reveal.js – The HTML Presentation Framework</title>
+    <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+    <meta name="author" content="Hakim El Hattab">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/robandrose.css" id="theme">
+    <!-- Code syntax highlighting -->
+    <link rel="stylesheet" href="lib/css/simple.css">
+    <!-- Printing and PDF exports -->
+    <script>
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+    document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+</head>
+
+<body>
+    <div class="reveal">
+        <!-- Any section element inside of this container is displayed as a slide -->
+        <div class="slides">
+            <section data-markdown>
+                ## Einführung Processing 
+                ### Geschichte: 
+                Processing wurde von Ben Fry und Casey Reas 2001 am MIT Media Lab entwickelt, quasi als direkter Nachfolger des «Design by Numbers» Projekt von John Maeda, in deren Klasse sie studierten. Das Ziel war es eine vereinfachte Programmierumgebung zu entwickeln um einen einfachen Einstieg in die Programmierung zu ermöglichen.
+            </section>
+            <section data-markdown>
+                ### Basis 
+                Die Basis von Processing ist die Programmiersprache JAVA. Processing ist eine Bibliothek dieser Sprache und hat alle Möglichkeiten, die auch Java bietet. Java wird in einer sogenannten Runtime-Engine ausgeführt, dadurch können die selben Programmierbefehle auf allen Betriebssystemen ausgeführt werden, für welche eine solche Runtime Engine existiert (Mac, Windows, Linux, Android).
+            </section>
+            <!-- Example of nested vertical slides -->
+            <section>
+                <section data-markdown>
+                    ### Processing ist: Eine Community und Foundation ![alt text](img/processing/p_foundation.png "")
+                </section>
+                <section data-markdown>
+                    Eine Webseite ![alt text](img/processing/processing_org.png "")
+                </section>
+                <section data-markdown>
+                    … mit einem Nachschlagewerk ![alt text](img/processing/processing_org_ref.png "")
+                </section>
+                <section data-markdown>
+                    Eine IDE (integrated development environment) ![alt text](img/processing/p_ide.png "")
+                </section>
+                <section data-markdown>
+                    Ein Ecosystem mit vielen Libraries und verwandten Projekten wie P5.js ![alt text](img/processing/p5js.png "")
+                </section>
+                <section data-markdown>
+                    arduino für die Mikrokontrollerprogrammierung ![alt text](img/processing/arduino.png "")
+                </section>
+            </section>
+        </div>
+    </div>
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+    <script>
+    // Full list of configuration options available at:
+    // https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: false,
+        transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+
+        // Optional reveal.js plugins
+        dependencies: [{
+            src: 'lib/js/classList.js',
+            condition: function() {
+                return !document.body.classList;
+            }
+        }, {
+            src: 'plugin/markdown/marked.js',
+            condition: function() {
+                return !!document.querySelector('[data-markdown]');
+            }
+        }, {
+            src: 'plugin/markdown/markdown.js',
+            condition: function() {
+                return !!document.querySelector('[data-markdown]');
+            }
+        }, {
+            src: 'plugin/highlight/highlight.js',
+            async: true,
+            callback: function() {
+                hljs.initHighlightingOnLoad();
+            }
+        }, {
+            src: 'plugin/zoom-js/zoom.js',
+            async: true
+        }, {
+            src: 'plugin/notes/notes.js',
+            async: true
+        }]
+    });
+    </script>
+</body>
+
+</html>

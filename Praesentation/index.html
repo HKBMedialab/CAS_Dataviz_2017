@@ -1,0 +1,537 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>reveal.js – The HTML Presentation Framework</title>
+    <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+    <meta name="author" content="Hakim El Hattab">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/style.css" id="theme">
+    <!-- Code syntax highlighting -->
+    <link rel="stylesheet" href="lib/css/simple.css">
+    <!-- Printing and PDF exports -->
+    <script>
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+    document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+</head>
+
+<body>
+    <div class="reveal">
+        <!-- Any section element inside of this container is displayed as a slide -->
+        <div class="slides">
+
+            <section data-markdown>
+                # Creative Coding
+                ## Digitale Werkzeuge selber basteln
+                *HKB CAS Datavisualisierung 2016*   
+                Michael Flückiger  
+            </section>
+
+            
+            <section data-markdown>
+                * BA Studium Viskom, HKB 2006 — 2009  
+                * MA Studium Communicationdesign, HKB 2009 — 2012
+                * Grafiker und Interactiondesigner bei Rob & Rose, 2009 — 2012
+                * Selbständig seit 2012, Teilzeit Wissenschaftlicher Mitarbeiter FSP KD und Medialab    an der HKB
+            </section>
+
+            <section  >
+
+	            <section  >
+	            	<iframe data-src="http://www.laikafont.ch"></iframe> 
+	            	<div class="quelle">www.laikafont.ch</div>
+	            </section>
+
+
+
+
+				<section  >
+					<video controls>
+					  <source src="img/data/SelfieTango.mp4" type="video/mp4">
+					  Your browser does not support the video tag.
+					</video>
+	            </section>
+
+
+  				<section>
+                <div class="vimeostretch">
+                <iframe src="https://player.vimeo.com/video/142179343" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                </div>
+            </section>
+
+  	
+            </section>
+            
+            <section data-markdown>
+            <script type="text/template">
+            # Was
+            …ist Parametric Design, Creative Coding, DevArt, Poetic Computation und wie das alles heisst?
+            * Programmierung als kreative / künstlerische Disziplin<!-- .element: class="fragment" -->
+            * Programmierung als gestalterisches Werkzeug<!-- .element: class="fragment" -->
+            * Bewältigung hoher Komplexität<!-- .element: class="fragment" -->
+            * Gestalterisches- bzw künstlerisches Interesse am Code. Beschäftigung mit der Technik sind nicht eine Ursache, sondern eine Folge davon.<!-- .element: class="fragment" -->
+            * Creative Coding et al. will mit den Mitteln der Programmierung nicht unbedingt einen funktionalen, als vielmehr einen expressiven Output.<!-- .element: class="fragment" -->
+           
+            </script>
+            </section>
+
+
+     		<section data-markdown>
+            <script type="text/template">
+            # Was
+            …heisst das konkret?
+            * Gestalten mit Parametern<!-- .element: class="fragment" -->
+            * Gestalten mit Regelwerken<!-- .element: class="fragment" -->
+            * Gestalten mit Abhängikeiten und Bedingungen<!-- .element: class="fragment" -->
+            </script>
+            </section>
+
+
+
+            <section data-markdown>
+                <script type="text/template">
+                # Woher
+                …kommen die Begriffe?  
+
+                * Parametric Design ist eher in der Architektur angesiedelt und beschäftigt sich mit dem Entwurf komplexer Strukturen z.B für die Statik oder die Fassade<!-- .element: class="fragment" -->
+                * Creative Coding ist eher im Design wie z.B Generatives Design und interaktive Installationen angesiedelt  <!-- .element: class="fragment"  -->
+                * DevArt ist eher im Bereich künstlerischer Praxis zu finden<!-- .element: class="fragment" -->
+                * Poetic Computation ist eine Schule in NY, die nicht nur künstlerische, sondern auch sprachliche Überlegungen zum Code verfolgt, schliesslich sind Programmiersprachen auch Sprachen und Code bedeutet Verdichtung.
+                Dadurch ist eine gewisse Nähe zur literarischen Poesie gegeben.<!-- .element: class="fragment" -->
+        
+
+                </script>
+             </section>
+
+
+
+            
+
+
+            
+            <section >
+            <div data-markdown>
+            ## Was bedeutet das jetzt für mich als Gestalter?
+            >     
+            </div>
+            <blockquote>
+            «Sich wiederholende Aufgaben werden automatisiert: Die Arbeit des Gestalters verschiebt sich von der Gestaltung einzelner Dokumente zur Gestaltung eines einzigen Regelwerks für das komplette Ergebnis. Die Gestaltung ist nicht ein nachgeschobener Prozess, sondern wird vorgezogen. Sie bedeutet nicht mehr nur Formgebung, sondern Regeldefinition. (…) »
+            <div class="small">rokfor.ch</div>
+            </blockquote>
+           
+            </section>
+
+
+
+     	
+
+
+
+            
+            <section data-markdown>
+                <script type="text/template">
+                ## Programmierung und Datenvisualisierung:
+                * Verarbeiten / Darstellen von grossen Datenmengen automatisieren<!-- .element: class="fragment" -->
+                * Verarbeiten komplexer Datenstrukturen<!-- .element: class="fragment"  -->
+                * Ermöglichung von sehr aufwändigen Darstellungen <!-- .element: class="fragment"  -->
+                * Interaktion als Vermittlungsansatz z.B  komplexer oder verschachtelter Daten<!-- .element: class="fragment"  -->
+                </script>
+            </section>
+
+            <section>
+            <section>
+                <h2> Architektur</h2>
+                <img src="img/parametric/google_search.png" />
+                
+                <div class="quelle">
+                Google Bilder-Suche nach Parametric Design
+                </div>
+
+
+                <aside class="notes">
+                Grosse Relevanz hat der Begriff seit längerer Zeit im Feld der Architektur. Es existieren an Architekturhochschulen Professuren für algorithmisches Entwerfen, wo einzig auf die Gestaltungsmöglichkeiten mit digitalen Werkzeugen fokussiert wird. 
+
+                In der Architektur besteht eine höhere Dringlichkeit für parametrisiertes Gestalten, weil die Komplexität der Problemstellung extrem hoch ist, einerseits durch die räumliche Komponente aber auch durch technische Bedingungen wie Tragfähigkeit einer Struktur etc. 
+                </aside>
+
+            </section>
+
+            <section>
+            <img data-src="img/parametric/elefantenhaus03.jpg" />
+                <div class="quelle">Dach des neuen Elefantenhauses im zürcher Zoo</div>
+            </section>
+            <section>
+            <img data-src="img/parametric/som_mumbai_airport.jpg" />
+                <div class="quelle">SOM Mumbai Airport</div>
+            </section>
+            
+            <section>
+                  <img data-src="img/parametric/weingut_deplazes.jpg">
+                   <div class="quelle">Weingut Bearth Deplazes</div>
+            </section>
+           
+             <section>
+                  <img data-src="img/parametric/weingut_detail.jpg">
+                   <div class="quelle">Weingut Bearth Deplazes, Nahansicht der Mauer</div>
+            </section>
+           
+
+            
+
+         
+            
+            </section>
+
+            
+            
+            
+            <section>
+
+            <section>
+                <h2> Kommunikationsdesign</h2>
+                <img data-src="img/parametric/mathbutterfliesbig.jpg" class="medium left" />
+                <img data-src="img/parametric/maeda_morisawa.jpg" class="medium left" />
+                <img data-src="img/parametric/john_maeda.jpg" class="small right" />
+                <div class="clear"></div>
+                <div class="quelle">John Maeda / Maeda Studio</div>
+
+                <aside class="notes">
+                Aber auch im Kommunikationsdesign wird seit längerem mit parametrischen Gestaltungsansätzen gearbeitet. Einer der ersten, die das Potential von Computern im Bereich des Designs exploriert haben war John Maeda, der lange Zeit am MIT Media Lab eine Professur inne hatte. Bei ihm studierten auch die Entwickler von Processing, welches wir für diesen Kurs verwenden werden.
+                </aside>  
+            </section>
+             
+             <section>
+                <div class="vimeostretch">
+                <iframe src="https://player.vimeo.com/video/20250134" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                </div>
+                <div class="quelle"> MIT Media Lab Identity
+                </div>
+            </section>
+
+          
+              <section>
+                <div class="vimeostretch">
+                  <iframe src="https://player.vimeo.com/video/7825438" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        
+                </div>
+                <div class="quelle"> DECODE, Identity für eine Ausstellung im Victoria & Albert Museum von Karsten Schmidt
+                </div>
+            </section>
+
+            <section >
+                <iframe src="http://benbarry.com/project/f8-conference"></iframe>
+
+            </section>
+        
+            </section>
+
+
+         <section>
+   				
+   			<section  >
+                <h2> Datavisualisierungen</h2>
+            	<iframe data-src="http://www.mamartino.com/projects/rise_of_partisanship/index.html"></iframe> 
+            	<div class="quelle"><a href="http://www.mamartino.com/projects/rise_of_partisanship/index.html" target="_blank">http://www.mamartino.com</a></div>
+            </section>
+
+            <section>
+
+ 			<div class="vimeostretch">
+            <iframe src="https://player.vimeo.com/video/88093956"  width="500" height="281"  frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+            </div>
+             <div class="quelle"> http://www.nats.aero</div>
+            </section>
+
+
+  				<section  >
+
+            	<iframe data-src="http://hint.fm/wind/"></iframe> 
+            	<div class="quelle"><a href="http://hint.fm/wind/" target="_blank">http://hint.fm/wind/</a></div>
+            </section>
+
+
+		<section  >
+
+            	<iframe data-src="http://armsglobe.chromeexperiments.com"></iframe> 
+            	<div class="quelle"><a href="http://armsglobe.chromeexperiments.com" target="_blank">http://armsglobe.chromeexperiments.com</a></div>
+            </section>
+
+     <section>
+                <div class="vimeostretch">
+                <iframe src="https://player.vimeo.com/video/20412632" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                </div>
+                <div class="quelle"> Immaterials: Light painting WiFi,   
+                <a href="https://vimeo.com/20412632" target="_blank">https://vimeo.com/20412632</a>
+                </div>
+            </section>
+
+             
+             <section>
+                <div class="vimeostretch">
+                <iframe src="https://player.vimeo.com/video/25141204" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                </div>
+                <div class="quelle"> http://www.robandrose.ch
+                </div>
+            </section>
+
+          
+             
+
+            
+           
+            </section>
+
+
+
+
+
+            <section >
+            <h1>Wie</h1>
+            …funktioniert ein solches parametrisches Design?
+            <blockquote>
+            «Der Gestalter positioniert nicht Elemente, sondern er beschreibt, wie er auf diese Position gestossen ist. Die Beschreibung muss dabei gewisse Rahmenbedingungen erfüllen: Sie muss etwa logisch nachvollziehbar sein und sie braucht die Charakteristika eines Algorithmus. Intuition und Gefühl müssen dabei für einen Computer ausführbar formuliert werden.» 
+            <div class="small">rokfor.ch</div>
+            </blockquote>
+
+            </section>
+
+            <section data-markdown>
+            <script type="text/template">
+            ## Mit dem Computer sprechen
+
+            * Intuition und Gefühl in Anweisungen/Algorithmen übersetzen <!-- .element: class="fragment" -->
+            * Dem Computer die mühsame, repetitive Arbeit überlassen <!-- .element: class="fragment" -->
+            * Mit dem Computer sprechen heisst: Programmieren lernen!  <!-- .element: class="fragment" -->
+
+            Note:
+            Am Anfang wird also Intuition und Gefühl in einer dem Computer verständlichen Sprache ausgedrückt.  Diese Sammlung von Anweisungen (Algorithmus) zur Lösung des Problems sollen nun vom Computer (oder einer Heerschaar von Helfern) ausgeführt werden, um schlussendlich in einem Bild, einem räumlichen Gebilde oder einem Ton etc. ihren Ausdruck zu finden.
+
+            Das heisst, ich muss als Gestalter die Sprache des Computers verstehen um mich mit ihm auf Augenhöhe verständigen zu können, und ihn als Lakaien für meine Ziele einspannen zu können. 
+            
+            Sprich, *ich muss Programmieren lernen*. 
+            </script>
+            </section>
+
+            <section>
+            <section data-markdown>
+            ## Tools
+            Verschiedene Toolsets für spezifische Bedürfnisse von Gestaltern
+
+            * niedrige Einstiegshürde, schöne Entwicklungsumgebung
+            * gute Zeichnungsfunktionen
+            * einfache Multimedia-Komponenten
+            * viele Anbindungsmöglichkeiten an bereits existierende Toolsets
+            * gute Community mit vielen Tutorials und Referenzbeispielen
+
+
+            Note:
+            Für Künstler/Gestalter existieren mittlerweile eine grosse Bandbreite an Einstiegsmöglichkeiten und Toolsets für ihre spezifischen Bedürfnisse. 
+
+            
+            </section>
+            <section data-markdown>
+            ### MAX/MSP VVVV
+            Visuell programmieren
+            ![](img/parametric/max_msp.jpg "")
+
+            Note:
+            Angefangen bei den Programmierumgebungen wie Max/Msp oder VVVV, wo einzelne logische Blöcke visuell miteinander verbudnen werden. 
+
+            </section>
+            <section data-markdown>
+            ### Processing, P5.js
+            Basis JAVA/Javascript
+            ![](img/parametric/processing.png)
+            </section>
+           
+            <section data-markdown>
+            ### Openframeworks
+            Basis C++
+             ![](img/parametric/openframeworks.png "")
+            </section>
+
+                   <section data-markdown>
+            ### Basil.js
+            Indesign Scripting, orientiert an Processing-Syntax
+             ![](img/parametric/basil.png "")
+
+            </section>
+
+  			 <section data-markdown>
+            ### Paper.js
+            Basis HTML/CSS/Javascript
+            ![](img/data/paperjs.png)
+            </section>	
+
+
+             <section data-markdown>
+            ### D3.js
+            Basis HTML/CSS/Javascript
+             ![](img/data/d3.png "")
+    		</section>	
+
+
+
+		
+
+            	 <section data-markdown>
+            ### Three.js
+            Basis HTML/CSS/Javascript/WebGL
+            ![](img/data/threejs.png)
+            </section>
+
+          
+
+           
+
+            </section>   
+
+
+           
+
+
+            <section data-markdown>
+            # Warum
+            …sollen wir uns das antun?
+            </section>
+
+<section>
+            <section data-markdown data-background-image="img/parametric/complex_port_to_port.jpg " class="inverted">
+            ## Lösung Komplexer Probleme
+           
+            Note:
+            Parametrisches Design wird einerseits dann relevant, wenn die hohe Komplexität eines Systems eine manuelle Gestaltung extrem Arbeitsintensiv und mühsam macht, wenn viele Abhängigkeiten zwischen den einzelnen Gestaltungseelementen bestehen, und verschiedene Parameter sich gegenseitig auf komplizierte Weise beeinflussen. So zum Beispiel bei architektonischen Entwürfen oder bei komplexen Datenvisualisierungen etc. aber auch bei grafischen Elementen, Schriften etc. 
+            </section>
+
+            <section data-markdown >
+            ## Lösung Komplexer Probleme
+            * hohe Komplexität meistern
+            * komplizierte Prozesse beschleunigen
+            * aufwändige, repetitive Handarbeiten verhindern
+            * grosse, evtl automatisierte Modularität herstellen
+
+            </section>
+            </section>
+
+            <section>
+            <section data-markdown data-background-image="img/parametric/caseyreas.jpg " >
+            ## Freude am algorithmischen Gestalten
+            Note:
+            Andererseits bietet das Denken in Algorithmen und die schier endlose Geduld von Computern im Ausführen komplexer Regeln ein grosses Potential, zu Konzepten und Formensprachen zu gelangen, die erst mit Hilfe von Algorithmen denkbar sind, und nicht mit Papier und Schere / Stift herstellbar wären.            
+            </section>
+             <section data-markdown>
+            ## Freude am algorithmischen Gestalten
+            * hohe Komplexität herstellen aus reiner Lust an Komplexität.
+            * Auf neue Formensprachen gelangen
+            
+            
+            
+            </section>
+
+            </section>
+
+            <section>
+            <section data-markdown data-background-image="img/parametric/prothese.png " class="inverted">
+            ## Selbstermächtigung als Gestalter
+            
+            </section>
+
+            <section data-markdown>
+            ## Selbstermächtigung als Gestalter
+
+            * Unabhängig werden von fertig gedachten Softwarelösungen
+            * Kleine scharfe Werkzeuge herstellen
+            * program or be programmed (Douglas Rushkoff)
+           
+            Note:
+            Als Gestalter sind wir in der Regel Anwender von Programmen und können mit diesen die vorgegebenen Aufgaben mehr oder weniger sinnvoll lösen. Sobald wir aber in der Lage sind, unsere eigenen ganz spezifischen Werkzeuge zur Lösung unserer Probleme herzustellen 
+           
+            </section>
+
+            </section>
+
+            <section data-markdown>
+            # Unser Fokus
+            * Potential erahnen
+            * Freude und Lust beim Explorieren
+            * Einfache Eingabe, komplexe Ausgabe
+
+            </section>
+           
+
+
+          
+			
+            
+            
+
+            <section data-markdown>
+            # Algorithmus
+            Wikipedia:
+            > Ein Algorithmus ist eine eindeutige Handlungsvorschrift zur Lösung eines Problems oder einer Klasse von Problemen. Algorithmen bestehen aus endlich vielen, wohldefinierten Einzelschritten.  Somit können sie zur Ausführung in einem Computerprogramm implementiert, aber auch in menschlicher Sprache formuliert werden. Bei der Problemlösung wird eine bestimmte Eingabe in eine bestimmte Ausgabe überführt.
+            </section>
+            <section >
+            <img data-src="img/algorithmus/flowchart.jpg" />
+            </section>
+
+            <section>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/kPRA0W1kECg" frameborder="0" allowfullscreen></iframe>
+            </section>
+
+        </div>
+    </div>
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+    <script>
+    // Full list of configuration options available at:
+    // https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: false,
+        transition: 'slide', // none/fade/slide/convex/concave/zoom
+        showNotes:false,
+
+        // Optional reveal.js plugins
+        dependencies: [{
+            src: 'lib/js/classList.js',
+            condition: function() {
+                return !document.body.classList;
+            }
+        }, {
+            src: 'plugin/markdown/marked.js',
+            condition: function() {
+                return !!document.querySelector('[data-markdown]');
+            }
+        }, {
+            src: 'plugin/markdown/markdown.js',
+            condition: function() {
+                return !!document.querySelector('[data-markdown]');
+            }
+        }, {
+            src: 'plugin/highlight/highlight.js',
+            async: true,
+            callback: function() {
+                hljs.initHighlightingOnLoad();
+            }
+        }, {
+            src: 'plugin/zoom-js/zoom.js',
+            async: true
+        }, {
+            src: 'plugin/notes/notes.js',
+            async: true
+        }]
+    });
+    </script>
+</body>
+
+</html>
