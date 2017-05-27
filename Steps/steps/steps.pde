@@ -25,35 +25,33 @@ void setup() {
 
   //get Maximum
   float maxSteps=0;
-    float maxflights=0;
+  float maxflights=0;
 
   float min =0;
   for (int i = 0; i<table.getRowCount(); i++) { 
     // float value=table.getRow(i).getFloat("Distance (mi)")*1609.34;//to meter;
     float value=table.getRow(i).getFloat("Steps (count)");
-    float flights=table.getRow(i).getFloat("Steps (count)");
+    float flights=table.getRow(i).getFloat("Flights Climbed (count)");
 
 
     if (value>maxSteps)maxSteps=value;
     if (flights>maxflights)maxflights=flights;
-
   }
 
   for (int i = 0; i<table.getRowCount(); i++) { 
     //float value=table.getRow(i).getFloat("Distance (mi)")*1609.34;//to meter
     float value=table.getRow(i).getFloat("Steps (count)");
-   //float mappedVal=map(value, 0, maxSteps, 0, height/3);
+    float mappedVal=map(value, 0, maxSteps, 0, height/3);
 
     float heightvalue=table.getRow(i).getFloat("Flights Climbed (count)");
-    float mappedVal=map(heightvalue, 0, maxSteps, 0, height/3);
+    float mappedHeightVal=map(heightvalue, 0, maxflights, 0, height/3);
 
 
     float colorlerp=map(value, 0, maxSteps, 0, 1);
-    // println(colorlerp);
     color fillcolor = lerpColor(from, to, colorlerp);
 
     fill(fillcolor);
-    rect(posX, posY, rectsize, mappedVal);
+    rect(posX, posY, rectsize, mappedHeightVal);
 
 
     posX=posX+rectsize;
