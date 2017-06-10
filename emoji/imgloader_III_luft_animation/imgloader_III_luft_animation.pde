@@ -17,7 +17,7 @@ int maxRows=0;
 void setup() {
   size(200, 200); 
   background(200, 200, 255);
-  pixelDensity(2);
+  //pixelDensity(2);
   frameRate(20);
   // load images
   for (int i=0; i<10; i++) {
